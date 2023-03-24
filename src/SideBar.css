@@ -1,0 +1,33 @@
+#sideBar{
+    position: relative;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    border-radius: 20px;
+    flex-direction: column;
+    background-image: linear-gradient(rgb(44, 39, 188), rgb(100, 109, 210));
+    width: 260px;
+    height: 100vh;
+    position: relative;
+    left: 60px;
+}
+#sideBar>#data{
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+    height: 200px;
+}
+#sideBar>#data>h3{
+    font-weight: 400;
+    border-bottom: 1px solid white;
+    padding: 12px;
+    opacity: 0.8;
+}
+#sideBar>#data>h3:hover{
+    opacity: 1;
+    font-weight: 600;
+}
