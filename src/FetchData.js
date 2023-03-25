@@ -3,18 +3,19 @@ import { useContext } from 'react'
 const DtaTransfer = createContext()
 export const Transfer =()=> useContext(DtaTransfer);
 export default function FetchData(props) {
-    const [user,setUser] = useState([]);
-    useEffect(()=>{
+  const [value,setValue] = useState([]);
+  const fetchUser =()=>{
       fetch("https://panorbit.in/api/users.json")
-      .then(res=>res.json())
-      .then((result)=>{
-          setUser(result.users);
-          console.log(user);
+      .then(res=>res.json()).then((result)=>{
+          setValue(result.users);
       })
-    },[])
+  }
+  useEffect(()=>{
+      fetchUser()
+  },[])
   return (
     <div>
-        <DtaTransfer.Provider value={{user}}>
+        <DtaTransfer.Provider value={{value}}>
         {props.children}
         </DtaTransfer.Provider>
     </div>

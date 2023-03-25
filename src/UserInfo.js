@@ -13,7 +13,7 @@ export default function UserInfo() {
   const params = useParams();
 
   useEffect(()=>{
-    const ans = data.user.filter((ans)=>{
+    const ans = data.value.filter((ans)=>{
       return ans.id==params.id
     })
     setUser(ans[0]);
