@@ -13,8 +13,8 @@ export default function UserHeader() {
     const ans = data.value.filter((ans)=>{
       return ans.id==params.id
     })
-    setUser(ans[0]);
-  },[])
+    setUser({...ans[0]});
+  },[user])
   console.log(user);
   return (
    <>

@@ -16,8 +16,8 @@ export default function UserInfo() {
     const ans = data.value.filter((ans)=>{
       return ans.id==params.id
     })
-    setUser(ans[0]);
-  },[])
+    setUser({...ans[0]});
+  },[user])
   console.log(user);
   return (   
    <>
@@ -26,7 +26,7 @@ export default function UserInfo() {
       <div id='div1'>
         <img src={user.profilepicture} alt="" />
         <h1>{user.name}</h1>
-        <h3><span>UserName : </span>{user.username}</h3>
+        <h3><span>UserName : </span>{user.name}</h3>
         <h3><span>E-mail : </span>{user.email}</h3>
         <h3><span>Phone : </span>{user.phone}</h3>
         <h3><span>Website : </span>{user.website}</h3>
